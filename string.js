@@ -59,6 +59,6 @@ var str = "HELLO WORLD";
 console.log(str.split(""));
 console.log(str.split(" "));
 var str = "HELLO,WORLD";
-console.log(str.split(","));
+console.log(str.split(" "));
 
  
