@@ -53,6 +53,7 @@ console.log(typeof str.charAt(500));   // string
 console.log(typeof str[500]);          // Undefined  --- value + data type
 */
 
+/*
 
 //============================split method===========================
 var str = "HELLO WORLD";
@@ -60,5 +61,5 @@ console.log(str.split(""));
 console.log(str.split(" "));
 var str = "HELLO,WORLD";
 console.log(str.split(" "));
-
- 
+console.log("hello");
+ */
