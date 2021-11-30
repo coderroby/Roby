@@ -158,32 +158,116 @@ function myFunction(value) {
 const numbers1 = [45, 4, 9, 16, 25];
 const number2 = numbers1.map(multipleArray);
 
-function multipleArray(value){
-  return value*2;
-  return indexs*2;
-  
+function multipleArray(value) {
+  return value * 2;
+  return indexs * 2;
+
 }
 console.log(numbers1);
 console.log("my Array : " + numbers1);
 //console.log(number2);
-console.log("Multiples Array : " +number2);
+console.log("Multiples Array : " + number2);
 
 // ======================Filter method==========
 // The filter() method creates a new array with array elements that passes a test.
 
 // This example creates a new array from elements with a value larger than 18:
 const numbers3 = numbers1.filter(filtering);
-function filtering(values){
+function filtering(values) {
   return 10 < values;
 }
 //console.log(numbers3);
-console.log("Filtred >10 : " +number2);
+console.log("Filtred >10 : " + number2);
 
 // Filtering array using forEach Method==========
 let newFilter = [];
 numbers1.forEach(myfilter);
-function myfilter(value){
-  if (10 <value){newFilter.push(value)};
+function myfilter(value) {
+  if (10 < value) { newFilter.push(value) };
   return newFilter;
 }
 console.log(newFilter);
+
+
+// ====================Reduce method ======================
+// The Array reduce() Method
+// The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+
+// The reduce() method works from left-to-right in the array. See also reduceRight().
+
+// The reduce() method does not reduce the original array.
+
+let sum = numbers1.reduce(sumFunction);
+console.log(numbers1);
+function sumFunction(total, value) {
+  //console.log(total);
+  console.log("-----");
+  return total + value;
+
+}   //total, value, index, array
+console.log(sum);
+console.log("Sum of numbers: " + sum);
+
+let sum2 = numbers1.reduce(sumFunction, 20); //if want to initialize some value starts from reduce(sumFunction,20);
+console.log(sum2);
+console.log("=================");
+
+let squre = numbers1.reduceRight(squreFunction); //if want to initialize some value starts from reduce(sumFunction,20);
+function squreFunction(a, b){
+  return a +(b*b);
+}
+console.log("Result of reduceRight (squre and sum): : "+ squre);
+console.log("=================");
+
+// solving reduce method using forEach method
+let sum1 = 0;
+
+function sumFunction1(value) {
+  sum1 += value;
+}
+numbers1.forEach(sumFunction1);
+console.log(sum1);
+
+
+// convert String to array Array.form() method.
+let testLine = "asdhasiihisa";
+console.log(Array.from(testLine)); // convert a sring to array.
+console.log(testLine.split(""));  // as same as Array.from(veriable);
+
+
+// nameOfArray.every() method /// Some like filter method
+// সব গুলো উপাদানের মধ্যে আমার যুক্তি কি ঠিক আছে? (সত্য নাকি মিথ্যা) 
+let allOver18 = numbers1.every(myFunction);
+
+function myFunction(value) {
+  return value > 18;
+}
+console.log(allOver18);
+
+
+// some() method 
+//  কোনো একটা উপাদান কি আমার যুক্তি মানে?
+let allOver40 = numbers1.some(myFunction);
+
+function myFunction(value) {
+  return value > 40;
+}
+console.log(allOver40);
+
+
+//Array.indexOf() returns -1 if the item is not found.
+console.log(numbers1.indexOf(9)); // --> 2 ----> [45, 4, 9, 16, 25]
+const fru = ["Apple", "Orange", "Apple", "Mango"];
+let position = fru.lastIndexOf("Apple") + 1;
+console.log(position);
+
+//===== include
+//তোমার array  এর মধ্যে কি আমার উপাদান তা আছে? (হা / না? )
+//ECMAScript 2016 introduced Array.includes() to arrays. This allows us to check if an element is present in an array (including NaN, unlike indexOf).
+
+console.log(fru.includes("Mango"));   // true
+  
+
+
+
+
