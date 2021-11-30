@@ -114,7 +114,7 @@ cars.sort(function(a, b){
 console.log(cars);
  */
 
-
+/* 
 const numbers = [45, 4, 9, 16, 25];
 numbers.forEach(myData);
 function myData(a,b,d,c,e){   // ekta array theke 3 type er data pass hoi 1st = value, 2nd = index, 3rd full array (foreach method er khetre)
@@ -125,3 +125,65 @@ function myData(a,b,d,c,e){   // ekta array theke 3 type er data pass hoi 1st = 
   console.log(c);
   console.log("==========");
 }
+
+ */
+
+/* 
+//=============read a array and multiply its value and return a new array. As like Map method
+let nu = [45, 4, 9, 16, 25];
+let txt = [];
+let c;
+nu.forEach(myFunction);
+
+function myFunction(value) {
+  console.log("now value: "+ value);
+  c = value*2;
+  console.log("multiplied value: "+ c);
+  txt.push(c);
+  console.log("New array: "+ txt);
+}
+ */
+
+// ===================Map method ==============
+// The map() method creates a new array by performing a function on each array element.
+
+// The map() method does not execute the function for array elements without values.
+
+// The map() method does not change the original array.
+// Note that the function takes 3 arguments:
+
+// The item value
+// The item index
+// The array itself
+const numbers1 = [45, 4, 9, 16, 25];
+const number2 = numbers1.map(multipleArray);
+
+function multipleArray(value){
+  return value*2;
+  return indexs*2;
+  
+}
+console.log(numbers1);
+console.log("my Array : " + numbers1);
+//console.log(number2);
+console.log("Multiples Array : " +number2);
+
+// ======================Filter method==========
+// The filter() method creates a new array with array elements that passes a test.
+
+// This example creates a new array from elements with a value larger than 18:
+const numbers3 = numbers1.filter(filtering);
+function filtering(values){
+  return 10 < values;
+}
+//console.log(numbers3);
+console.log("Filtred >10 : " +number2);
+
+// Filtering array using forEach Method==========
+let newFilter = [];
+numbers1.forEach(myfilter);
+function myfilter(value){
+  if (10 <value){newFilter.push(value)};
+  return newFilter;
+}
+console.log(newFilter);
