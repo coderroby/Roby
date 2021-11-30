@@ -1,9 +1,0 @@
-six
-
-
-
-new update value 6
-
-
-
-putting 6 for pull
