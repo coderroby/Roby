@@ -23,6 +23,7 @@ numberOfPrint(5, 1, 6);
 
 */
 
+/*
 
 //=====================================Problem 2 ==================================
 // sort all of your class members alphabetically 
@@ -44,7 +45,7 @@ const roll_numbers = [4, 8, 9, 1, 2, 5, 10];
 roll_numbers.sort(function sortRoll(a, b) { return a - b; });
 console.log(roll_numbers);
 
-
+*/
 
 // ================problem 4 : count vowels from a string ====================
 // split string to array (string.split() // Array.from(string)); 
@@ -68,7 +69,7 @@ function count(value) {
     return countOfVowels;
 }
 
-console.log(countOfVowels); */
+console.log(countOfVowels); 
 
 //==functional Solve ==
 const vowel = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
@@ -85,5 +86,57 @@ function countVowels(justString) {
     return count1;
 }
 console.log(countVowels("Hello TV"));
+
+*/
+
+
+/*
+// =======Count the number of times a same value appears in a javascript array========
+
+const arr = ["a", "b", "b", "c", "c", "b", "b", "c"];
+let count = 0;
+function duplicateElementNumber(array, searchElement) {
+    array.forEach(function (value) {
+        if (value == searchElement) count++;
+        return count;
+    })
+    console.log(`${searchElement} has ${count} times `);
+}
+
+duplicateElementNumber(arr, "a");
+
+*/
+
+
+const arr = ["a", "a","c", "b"];
+let count = 0;
+const newArray = [];
+arr.forEach(howManyTimes);             // a koto bar ache check
+function howManyTimes(value){          // a
+    arr.forEach(valueCounting);
+    function valueCounting(val){
+        if (val == value) {
+            count++; 
+            
+            //console.log(count);
+            return count;
+        }
+        else return count = 0;
+        
+    }
+
+    if(count>1) newArray.push(value);
+
+
+}
+
+console.log(newArray);
+
+
+
+
+
+
+
 
 
