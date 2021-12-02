@@ -107,30 +107,32 @@ duplicateElementNumber(arr, "a");
 
 */
 
-
-const arr = ["a", "a","c", "b"];
+// ======= Find Duplicate elements and  unique elements.======== ( ( In my way ))
+const arr = ["a","c","b", "b","c","c","c", "E"];
 let count = 0;
 const newArray = [];
-arr.forEach(howManyTimes);             // a koto bar ache check
-function howManyTimes(value){          // a
-    arr.forEach(valueCounting);
-    function valueCounting(val){
-        if (val == value) {
-            count++; 
-            
-            //console.log(count);
-            return count;
-        }
-        else return count = 0;
-        
-    }
+const uniqueArray = [];
 
-    if(count>1) newArray.push(value);
-
-
-}
-
+arr.forEach(function duplicateElementNumber(searchElement) {
+    arr.forEach(function (value) {
+        if (value == searchElement) {count++;
+        return count;}
+    })
+    
+    console.log(`${searchElement} has ${count} times `);
+    if (count > 1) {newArray.push(searchElement);};
+    if (count == 1)uniqueArray.push(searchElement);
+    count = 0;
+   return newArray;
+}); 
 console.log(newArray);
+console.log(uniqueArray);
+
+let duplicateArrayElements = Array.from(new Set(newArray));
+console.log("Duplicate array : "+ duplicateArrayElements);
+console.log("Unique array : "+ uniqueArray);
+
+
 
 
 
