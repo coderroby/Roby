@@ -128,11 +128,37 @@ arr.forEach(function duplicateElementNumber(searchElement) {
 console.log(newArray);
 console.log(uniqueArray);
 
-let duplicateArrayElements = Array.from(new Set(newArray));
+let duplicateArrayElements = Array.from(new Set(newArray));   // Set returns object . to convert newArray to a unique array. Array.from() --> converting array from object. 
 console.log("Duplicate array : "+ duplicateArrayElements);
 console.log("Unique array : "+ uniqueArray);
 
+console.log("==============================");
 
+
+// solve this in short way. 
+
+const someNumbers = [1,4,5,6,4,3,2,1,8];
+const duplicateNumbers = someNumbers.filter(function(value, index, array){     // filter can access 3 elements value, index and array
+   return array.indexOf(value) !== index;
+});
+console.log(duplicateNumbers);
+
+const uniqueNumbers = someNumbers.filter(function(value, index, array){
+    return array.indexOf(value) === index;
+ });
+console.log(uniqueNumbers);
+
+
+
+
+//========================Leap year function===================
+function leapYear(year){
+    if (year % 4 === 0 && year % 100 !== 0 || year % 400 === 0)
+    console.log(`${year} is a Leap Year.`);
+    else console.log(`${year} is not a Leap Year.`);
+}
+
+leapYear(2026);
 
 
 
