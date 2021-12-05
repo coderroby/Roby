@@ -140,7 +140,7 @@ console.log("============");
 j = 5;
 
 for(;  ; j--){
-    if(j < 0){
+    if(j < 1){
         console.log("program ends here");
         break;
     }
@@ -148,6 +148,103 @@ for(;  ; j--){
         console.log(j);
     }
 }
+
+console.log("==========");
+// for/in ----> object er khetre kaj korai better , if index is important then we don't have to use in array. 
+
+const cars = {name:"BMW", model:"2018", weight:"500"};
+
+for (value in cars){                   // for in return index
+    //console.log(cars.value); // undefined
+    console.log(value + ": " + cars[value]); //accesing property and its value
+    //console.log(cars.name);   // accessing just name directly calling by object property.
+}
+
+console.log("=========");
+
+// for / of 
+
+let ab = "Arifur";
+for(x of ab){               //for of return value. ei jonno ei looping amra array teo use korte pari
+    console.log(x);
+    
+}
+for(x of arr){               //for of return value. ei jonno ei looping amra array teo use korte pari
+    console.log(x);
+}
+
+console.log("===============");
+
+// while loop 
+const y = [2,4,5,6,7,9];
+let f = y.length;
+// console.log(f);
+let d = 0;
+while(d<f){
+    console.log(y[d]);
+    d++;
+}
+
+
+//======== do while ===========
+let initial = 0;
+do{
+    console.log("text is now: "+ initial);
+    initial++
+}
+while(initial<5);
+
+// break 
+
+let testingTimes = 5;
+
+for (let start = 0; start < testingTimes ; start++ ){
+    if(start == 3){break;}     // loop will not continue after 3, because break called. if wat to skip break and all a statement we need to use continue; 
+    console.log(start);
+}
+// output 0,1,2
+
+console.log("=========");
+
+for (let start = 0; start < testingTimes ; start++ ){
+    if(start == 3){continue;}     //  continue will look on the statement and don brake the hole loop just skip the statement while true.
+    console.log(start);
+}
+// output 0,1,2,4
+
+
+console.log("==================");
+
+// ======================== Set ================= 
+// provide unique elements
+
+const newArray = new Set(["a", "b", "c"]);    // type of set ---> object
+console.log(typeof newArray);                 // object
+
+console.log(newArray);
+newArray.add("d")                             // set object e kono kichu push korte gele or element add korte gele add() use korte hoi
+console.log(newArray);
+newArray.add("d")                            // d again push korleo se multiple time same jinish input nibe na.
+console.log(newArray);
+
+newArray.forEach(function(value){console.log(value);});
+let txt = "";
+newArray.forEach(function(value){return txt += value});
+console.log(txt);
+
+
+console.log(newArray.values());     // iterable Iraretor return kore , ( Set iterator)
+console.log(typeof newArray.values());     // type Object 
+
+console.log("=======");
+for(let l of newArray.values()){                         // for/of onek ta for each er moto kaj kore.
+    console.log(l);
+}
+
+
+
+
+
 
 
 
