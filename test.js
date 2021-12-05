@@ -305,13 +305,27 @@ function isArray(myArray){
 }
 isArray(khabar);
 
+console.log("=====================");
+
+//==================== Data conversion =================
 console.log(Number("99ab10"));
 console.log(parseFloat("3.2"));  //3.2
 console.log(parseInt("3.2"));  //3
 console.log(String("123"));   
 console.log(String("100 + 23"));   
 console.log(String(100 + 23));   // 123 value but type string
-console.log(typeof String(100 + 23));
+console.log(typeof String(100 + 23));  // string
+
+console.log(String(Date()));
+console.log(Number(false));   // 0
+console.log(Number(true));  // 1
+
+
+console.log("5" * "2");          // javaScript ei rokom sudhu string number gulo k as a number hisabe conver kore , except + operator , cz + operator concatinate korar jonno use kora hoi .. tai ++ bade sob operation er khetre JS string number hisabe priority dei.
+console.log("5" - "2");          
+console.log(typeof ("5" / "2"));  // type o hobe number
+console.log("5" + "2");          // concate kore dibe
+
 
 
 
