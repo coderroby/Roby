@@ -242,9 +242,44 @@ for(let l of newArray.values()){                         // for/of onek ta for e
 }
 
 
+// ..............Map ............
+// A Map holds key-value pairs where the keys can be any datatype.
+// A Map remembers the original insertion order of the keys.
+// object er property always string use korte hoi kintu amra Map er khtre key k string ba number use kora jai
+const fruits = new Map([
+    ['appel', 400],
+    ["mango", 200],
+    [4000, 4100]
+]);
+console.log(fruits);
+fruits.set('bedana', 600);        // add new key and value
+console.log(fruits);
+console.log(typeof fruits);  // object 
+console.log(fruits.get('appel'));  // get the value of a key
+fruits.values();
+console.log(fruits);
+fruits.delete('mango');
+console.log(fruits);
+console.log(fruits.has("appel")); 
+console.log(fruits.has("mango")); 
 
+fruits.forEach(function(value,key){   // first value access kore then key tai kwy, value diya jabe na
+    console.log(key + ": " + value);   // array er khetre for each sudhu value acess kore kintu ekhane value and key duitai access kore karon ekhane ek ekta index positon e key, value er ekta pair pair akare thake
+});
 
+console.log('=========');
 
+for(let g of fruits.entries()){
+    //console.log(g);             // prottek ta array return kore. 
+    //console.log(g[0], g[1]);    // array return kore bole amra oi arrya er per index access korte pari
+   /*  g.forEach(function(value, index ){
+        console.log( value, index);
+        
+    }) */
+    for(let times = 0; times < g.length; times++){
+        console.log(g[times]);
+    }
+}
 
 
 
