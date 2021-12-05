@@ -281,6 +281,39 @@ for(let g of fruits.entries()){
     }
 }
 
+console.log("==================");
+const khabar = [1,2,3,6,4,5];
+console.log(khabar);
+console.log(typeof khabar);   // JS e array keo Object data type hisabe dekha hoi
+console.log(Array.isArray(khabar));  // sob somoy jehetu array k object hisabe dekhe tahole arry k confirm korbo kivabe Array.isArray(arrayName) --- > true false return korbe. 
+console.log(khabar instanceof Array); // arrayName instanceof Array;
+let feed = function(){};
+console.log(typeof feed);  // function
+
+
+console.log(khabar.constructor);  // kon function use kore ei variable take banano hoiche iside code seta return korbe
+let tutu = khabar.constructor.toString();
+console.log(tutu);
+console.log(typeof tutu);
+console.log(tutu.indexOf("Array") ); 
+
+console.log(tutu.indexOf("Array") >-1 ); 
+
+// solving checking array in a functional way. 
+function isArray(myArray){
+    console.log(myArray.constructor.toString().indexOf("Array") > -1);  // Array e sudhu na sob dhoroned data check kora somvob.. I mean type ber kora somvob. Object, Undefined, Function 
+}
+isArray(khabar);
+
+console.log(Number("99ab10"));
+console.log(parseFloat("3.2"));  //3.2
+console.log(parseInt("3.2"));  //3
+console.log(String("123"));   
+console.log(String("100 + 23"));   
+console.log(String(100 + 23));   // 123 value but type string
+console.log(typeof String(100 + 23));
+
+
 
 
 
