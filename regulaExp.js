@@ -63,12 +63,19 @@ console.log("saijnsak");
 }
 let x = function(){};
 console.log(typeof x);
+/// solve my thiking in regula exp way Hlp from " Rimon Ahmed"
+//Regular expression literal syntax এর ক্ষেত্রে আপনি এভাবে variable পাস করতে পারবেন না, এক্ষেত্রে আপনি regex এর constructor ব্যবহার করতে পারেন।
+const howMany = (sentence,searchItem) => { const regex = new RegExp(searchItem,"gi");
+const match = sentence.match(regex);
+match? console.log(`${match.length} match found`) : console.log("no match found");
+};
+howMany("I hate you more then me I Hate myslef", "hate");
 
-
-
-
-
-
+abc = 9;
+{
+console.log( typeof abc);
+let abc "gygy";
+}
 
 
 
