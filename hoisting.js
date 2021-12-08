@@ -9,24 +9,27 @@ console.log(!language);
 
 
 function getLanguage(){
+    /* var language;
+    language = undefined; */
     console.log(!language);
     if(!language){
+        
         console.log(!language);
-        var language = LANGUAGE;
+        let language = LANGUAGE;
         console.log(language);
 
     }
-    return language;
+    else console.log(language); 
 }
 
 getLanguage(); 
 
 
-function myfunction(){
+/* function myfunction(){
     lan = "javasx";
     var lan;
     console.log(lan);
 }
 
 myfunction();
-console.log(lan);
+console.log(lan); */
