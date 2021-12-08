@@ -15,7 +15,7 @@ function getLanguage(){
     if(!language){
         
         console.log(!language);
-        let language = LANGUAGE;
+        language = LANGUAGE;
         console.log(language);
 
     }
