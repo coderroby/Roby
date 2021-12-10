@@ -67,7 +67,7 @@ console.log(typeof x);
 //Regular expression literal syntax এর ক্ষেত্রে আপনি এভাবে variable পাস করতে পারবেন না, এক্ষেত্রে আপনি regex এর constructor ব্যবহার করতে পারেন।
 const howMany = (sentence,searchItem) => { const regex = new RegExp(searchItem,"gi");
 const match = sentence.match(regex);
-match? console.log(`${match.length} match found`) : console.log("no match found");
+match? console.log(`${match.length} match found ${searchItem}`) : console.log("no match found");
 };
 howMany("I hate you more then me I Hate myslef", "hate");
 
