@@ -97,9 +97,21 @@ console.log(Boolean(0n));
 console.log(Boolean(document.all));
 
 // ommiting falsy value. or detecting falsy values 
-const setOfValues = [" ", '', ``, null , "a", undefined, NaN, 0, -0, "Robi", false];
-for (const value of setOfValues) {
+const setOfValues = ["", '', ``, null , "a", undefined, NaN, 0, -0, "Robi", false];
+let uniqueNew = [];
+setOfValues.forEach(function(value){
+    if(value) return uniqueNew.push(value);
+} );
+console.log(uniqueNew);
+
+//Sovle this at using filtering;
+let newSet = setOfValues.filter(function(value){
     if(value) return true;
     else return false;
-    
-}
+});
+console.log(newSet);
+
+// solve this at one line using Filter and boolean
+let newSet1 = setOfValues.filter(Boolean);
+console.log(newSet1);
+console.log(newSet1.length);  // number of true values in array.
