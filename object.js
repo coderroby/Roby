@@ -62,19 +62,48 @@ document.getElementById("list").innerHTML = JSON.stringify(person);  //sudhu mat
 const person1 = {
     firstName: "John",
     lastName: "Doe",
-    
+
 };
 Object.defineProperty(person1, "fullName", {
-    get: function () {return this.firstName + " " + this.lastName; }
+    get: function () { return this.firstName + " " + this.lastName; }
 });
 
 console.log(person1);
 console.log(person1.fullName);
 
 
+// Constructor Object function
+
+function MyPersons(fname, lname, age) {              // functional Object blue print crete korar somoy boro hater name use kore better. 
+    this.fname = fname,
+        this.lname = lname,
+        this.age = age,
+        this.fullName = function () {
+            return this.fname + " " + this.lname;
+        }
+}
+
+const robi = new MyPersons("Arifur", "Rahman", 28);     // Properway to create an object using Constructor  new constructor object name then value.
+//const Bio = MyPersons("Saikot", "hasan", 27);          // undefined return korbe. new diye then Constructor use kore create korte hoi tai new call na kole crete hobe na and undefined return korbe
+const Bio = new MyPersons("Saikot", "hasan", 27);
+console.log(robi);
+robi.country = "Bangladesh";   // new object crete kore amra iccha korle abar sei object e value create korte pari. 
+//MyPerson.country = "Bangladesh";  // eita kora jabe na, karon amra contructor function take cange korte gele amader k main body te giyei change hobe.
+console.log(robi);   // country add hoye htakbe 
+console.log(Bio);    // country add kori nai amra So ekhane abar country pabo na
 
 
-
+class Animal{
+    constructor(name){
+        this.name = name;
+    }
+    speak(){
+        console.log(`I am a Good ${this.name}`);
+    }
+}
+const cat = new Animal('cat');
+const cat2 = { speak: cat.speak };
+console.log(cat2.speak());
 
 
 
