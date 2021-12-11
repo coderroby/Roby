@@ -115,3 +115,47 @@ console.log(newSet);
 let newSet1 = setOfValues.filter(Boolean);
 console.log(newSet1);
 console.log(newSet1.length);  // number of true values in array.
+
+
+
+//find truthy value from an object
+const someObj = {
+    a: "",
+    b: "",
+    c: false,
+    d: null,
+    e: true,
+    f: 0,
+    g: -0,
+    h: '',
+    i: "acvs"
+
+};
+console.log(typeof someObj);
+
+const newObj= {};
+let truthObj = function (obj){
+    for(let i in obj){
+        if(obj[i])  newObj[i]= `${obj[i]}`;
+    }
+    return newObj;
+}
+console.log(truthObj(someObj));
+
+// find truthy value using delete elements from object
+let truthyObj = function (obj){
+    for (let i in obj){
+        if(!obj[i]) delete obj[i];
+    }
+    return obj;
+};
+
+console.log(truthyObj(someObj));
+
+
+
+
+
+
+
+
