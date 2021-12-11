@@ -46,7 +46,8 @@ function longestString(array) {
     //return [longestWord, c];
 }
 
-console.log(longestString(["Arifur", "Rahman Rob", "Arifur Rahman Roby", "Robi"]));
+longestString(["Arifur", "Rahman Rob", "Arifur Rahman Roby", "Robi"]);
+
 
 
  /*    //let three = [];
@@ -152,8 +153,26 @@ let truthyObj = function (obj){
 
 console.log(truthyObj(someObj));
 
+someObj.age = 50;  // derect property push korle  . diye push kora jai
+console.log(someObj.age);
+let t = 'age';
+console.log(someObj[t]);   // kintu propert call korar somoy deret call na kore literal variable ar maddhome call korte gele [] third bracket er moddhe diye call korte hoi.
 
 
+const person = {
+  firstName:"John",
+  lastName:"Doe",
+  age:50, eyeColor:"blue"
+}
+
+let text ="";
+for( let x in person){
+    text += person[x];
+}
+
+console.log(text);
+delete person.age;  // delete a property from object
+console.log(person);
 
 
 
