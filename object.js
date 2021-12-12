@@ -93,7 +93,7 @@ console.log(robi);   // country add hoye htakbe
 console.log(Bio);    // country add kori nai amra So ekhane abar country pabo na
 
 
-class Animal{
+/* class Animal{
     constructor(name){
         this.name = name;
     }
@@ -104,7 +104,7 @@ class Animal{
 const cat = new Animal('cat');
 const cat2 = { speak: cat.speak };
 console.log(cat2.speak());
-
+ */
 
 
 
