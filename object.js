@@ -147,3 +147,87 @@ console.dir(arrIterator.next());
 console.dir(arrIterator.next());
 
 
+// Set ()
+// A JavaScript Set is a collection of unique values.
+// Each value can only occur once in a Set.
+// A Set can hold any value of any data type.
+
+const myArray = [2,3,4,2,1,5,5,3];
+const myUniqueArray = Array.from(new Set(myArray)).sort();
+console.log(myUniqueArray);
+
+const me = {
+    fname : "Md. Arifur",
+    lname: "Robi"
+}
+console.log(me);
+console.log(me['fname']);
+me.age = 29;    
+console.log(me);
+
+const mySet = new Set();
+mySet.add("a");
+mySet.add("b");
+mySet.add("a");
+let d = "d";
+mySet.add(d);
+mySet.add("c");
+
+console.log(mySet);      // set holo object
+console.log(Array.from(mySet)); //convert a array from Set object
+console.log(Array.from(mySet).sort()); //sorting
+
+console.log(mySet.values());
+let iteratorSet = mySet.values();
+console.log(iteratorSet);
+console.log(mySet);
+for(let x of iteratorSet){
+    console.log(x);
+}
+
+console.log(mySet.keys());
+console.log(mySet.entries()); // value value pair
+console.log(Array.isArray(mySet));
+console.log(mySet instanceof Set );
+console.log(mySet.constructor); 
+
+const myMap = new Map([
+    ["apple", 500],
+    ["banana", 100],
+    [10, 500]
+
+]);
+console.log(myMap);
+myMap.set("alu", 20);
+console.log(myMap);
+myMap.set("apple", 600);  //ager apple k value change kore dilam
+console.log(myMap);
+
+myMap.delete("apple");   // delete 
+console.log(myMap);
+//myMap.clear();   // delete all elements from the map
+console.log(myMap);
+console.log(myMap.has('banana'));  // index ta ki ache ?? jodi thake tahole true return korbe
+console.log(typeof myMap);
+console.log(myMap instanceof Object );  //map is a object type data
+console.dir(myMap);  // map is iterable , Symbol.iterator methos ta ache map er protyper er moddhe
+console.log(myMap.size);
+
+const potol = {name: 'potol'};
+myMap.set(potol,50);
+console.log(myMap);
+console.log(myMap.get('alu'));
+console.log(myMap.get(potol));
+
+
+
+
+
+
+
+
+
+
+
+
+
