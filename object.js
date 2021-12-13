@@ -108,5 +108,42 @@ console.log(cat2.speak());
 
 
 
+// Prototype object 
+
+function Person(first, last, age, eyecolor) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.eyeColor = eyecolor;
+  }
+  
+  const myFather = new Person("John", "Doe", 50, "blue");
+  const myMother = new Person("Sally", "Rally", 48, "green");
+
+myFather.marryStatus = "married";
+Person.prototype.marry = "Married";
+console.log(myFather);
+console.log(myMother);
+console.dir(Person);
+console.log(myFather.marry);
+console.log(myMother.marry);
+
+let b = "Robi";
+console.log(b);
+console.log(b.toUpperCase());
+let c = new String("RObi");
+console.log(c);
+console.log(c.toUpperCase());
+
+let arr = [12,2,3,6,4,];
+console.log(arr);
+console.dir(arr);
+console.dir(person);
+
+console.dir(arr);
+let arrIterator = arr[Symbol.iterator]();
+console.dir(arrIterator.next());
+console.dir(arrIterator.next());
+console.dir(arrIterator.next());
 
 
