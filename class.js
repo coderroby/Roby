@@ -33,3 +33,36 @@ function NewStudent(name, roll, sClass, section){
 
 const abrar = new NewStudent("Abrar", 5,10,"D");
 abrar.statu(); 
+
+class Car{
+    constructor(carName){
+        this.carName = carName;
+    }
+    present(){
+        return this.carName + " has ABS";
+    }
+    get carN() {
+        return this.carName;
+    }
+    set carCol(x){
+        this.carColor = x;
+    }
+}
+
+class Model extends Car{
+    constructor(carName, CarModel){
+        super(carName);
+        this.CarModel = CarModel;
+    }
+    now(){
+        return this.present() + " and it is " + this.carName + ', it is model of ' + this.CarModel;
+    }
+}
+
+const BMW = new Car('BMW');
+console.log(BMW.present());
+const Toyota = new Model('Toyota', '2018');
+console.log(Toyota.now());
+BMW.carCol = 'blue';
+console.log(BMW);
+console.log(BMW.carN);
