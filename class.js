@@ -1,6 +1,9 @@
 // ECMAScript 2015, also known as ES6, introduced JavaScript Classes.
 // JavaScript Classes are templates for JavaScript Objects.
 
+// Unlike functions, and other JavaScript declarations, class declarations are not hoisted.
+// That means that you must declare a class before you can use it.
+
 class Students{
     constructor(name, roll, sClass, section){
         this.name = name;

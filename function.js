@@ -51,3 +51,28 @@ add();
 add();
 console.dir(add);
 console.dir(ab);
+
+
+(function(){
+    let a = 5;
+    let b = 10;
+    console.log(arguments.length);
+    return console.log(a+b);
+})();
+
+const x = (x,y) => {return x*y};
+console.log(x(4,5));
+
+function sum(x=0,y=0){
+    if(x===0 && y === 0){
+        console.log("please enter some number more then 0");
+    }
+    return x+y;
+}
+console.log(sum(0,5));
+
+const evenOdd = (a) => {
+    if(a % 2 === 0 && a!=0 ) return console.log(`${a} is Even`);
+    else return console.log(`${a} is Odd`);
+} 
+evenOdd(5)
