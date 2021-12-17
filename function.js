@@ -75,4 +75,4 @@ const evenOdd = (a) => {
     if(a % 2 === 0 && a!=0 ) return console.log(`${a} is Even`);
     else return console.log(`${a} is Odd`);
 } 
-evenOdd(5)
+evenOdd(5);

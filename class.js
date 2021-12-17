@@ -50,6 +50,9 @@ class Car{
     set carCol(x){
         this.carColor = x;
     }
+    static hello(x){
+        return console.log(`I am ` + x.carName);
+    }
 }
 
 class Model extends Car{
@@ -69,3 +72,4 @@ console.log(Toyota.now());
 BMW.carCol = 'blue';
 console.log(BMW);
 console.log(BMW.carN);
+Car.hello(BMW);
