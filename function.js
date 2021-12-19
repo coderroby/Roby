@@ -72,6 +72,7 @@ function sum(x=0,y=0){
 console.log(sum(0,5));
 
 const evenOdd = (a) => {
+    
     if(a % 2 === 0 && a!=0 ) return console.log(`${a} is Even`);
     else return console.log(`${a} is Odd`);
 } 
