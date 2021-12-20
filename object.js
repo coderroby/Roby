@@ -93,7 +93,9 @@ console.log(robi);   // country add hoye htakbe
 console.log(Bio);    // country add kori nai amra So ekhane abar country pabo na
 
 
-/* class Animal{
+// FB problem test
+/* 
+class Animal{
     constructor(name){
         this.name = name;
     }
@@ -218,13 +220,6 @@ myMap.set(potol,50);
 console.log(myMap);
 console.log(myMap.get('alu'));
 console.log(myMap.get(potol));
-
-
-
-
-
-
-
 
 
 
